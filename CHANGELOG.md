@@ -1,3 +1,3 @@
-## [0.0.1] - TODO: Add release date.
+## [0.0.1] - 2020/1/13
 
-* TODO: Describe initial release.
+- A very naive implementation of gRPC client for Contentos blockchain.
