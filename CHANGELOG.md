@@ -1,3 +1,8 @@
+## [0.2.0] - 2020/1/14
+
+- supports network id.
+- exposes gRPC generated types for advanced usage.
+
 ## [0.1.0] - 2020/1/14
 
 - license and documents update.
