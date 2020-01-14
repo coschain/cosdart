@@ -1,3 +1,3 @@
 library cosdart;
 
-export 'grpc/client.dart' show Network, CosChainClient;
+export 'src/grpc/client.dart' show Network, CosChainClient;

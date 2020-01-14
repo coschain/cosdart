@@ -1,5 +1,3 @@
-library cosdart.grpc;
-
 import 'package:grpc/grpc.dart';
 import 'package:grpc/service_api.dart' as $grpc;
 import 'generated/grpc.pbgrpc.dart';
