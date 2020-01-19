@@ -1,3 +1,7 @@
+## [0.2.1] - 2020/1/19
+
+- fixed a network config bug which may lead to connection failures.
+
 ## [0.2.0] - 2020/1/14
 
 - supports network id.
