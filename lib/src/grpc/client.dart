@@ -9,10 +9,15 @@ import 'generated/prototype/type.pb.dart';
 class Network {
   static final _mainNetId = "main";
   static final _mainNetHost = "grpc.contentos.io";
+  static final _testNetId = "test";
+  static final _testNetHost = "testnode.contentos.io";
   static final _defaultPort = 8888;
 
   /// builtin [Network] instance representing the Contentos main-net.
-  static final main = Network(_mainNetId, _mainNetHost, _defaultPort, true);
+  static final main = Network(_mainNetId, _mainNetHost, _defaultPort, false);
+
+  /// builtin [Network] instance representing the Contentos test-net.
+  static final test = Network(_testNetId, _testNetHost, _defaultPort, false);
 
   String _id;
   String _host;
@@ -60,8 +65,8 @@ class CosChainClient implements CosChainReader, CosChainWriter {
         port: port,
         options: ChannelOptions(
           credentials: secure
-              ? const ChannelCredentials.insecure()
-              : const ChannelCredentials.secure()
+              ? const ChannelCredentials.secure()
+              : const ChannelCredentials.insecure()
     ));
     _client = ApiServiceClient(channel, options: CallOptions(
       timeout: Duration(seconds: 30)
