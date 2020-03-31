@@ -27,6 +27,8 @@ const operation$json = const {
     const {'1': 'op20', '3': 20, '4': 1, '5': 11, '6': '.prototype.account_update_operation', '9': 0, '10': 'op20'},
     const {'1': 'op21', '3': 21, '4': 1, '5': 11, '6': '.prototype.acquire_ticket_operation', '9': 0, '10': 'op21'},
     const {'1': 'op22', '3': 22, '4': 1, '5': 11, '6': '.prototype.vote_by_ticket_operation', '9': 0, '10': 'op22'},
+    const {'1': 'op23', '3': 23, '4': 1, '5': 11, '6': '.prototype.delegate_vest_operation', '9': 0, '10': 'op23'},
+    const {'1': 'op24', '3': 24, '4': 1, '5': 11, '6': '.prototype.un_delegate_vest_operation', '9': 0, '10': 'op24'},
   ],
   '8': const [
     const {'1': 'op'},

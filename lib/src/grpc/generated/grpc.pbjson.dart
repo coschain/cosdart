@@ -123,6 +123,11 @@ const AccountInfo$json = const {
     const {'1': 'freeze_memo', '3': 27, '4': 1, '5': 9, '10': 'freezeMemo'},
     const {'1': 'stake_vest_from_me', '3': 28, '4': 1, '5': 11, '6': '.prototype.vest', '10': 'stakeVestFromMe'},
     const {'1': 'voted_block_producer', '3': 29, '4': 1, '5': 11, '6': '.prototype.account_name', '10': 'votedBlockProducer'},
+    const {'1': 'vest_borrowed', '3': 30, '4': 1, '5': 11, '6': '.prototype.vest', '10': 'vestBorrowed'},
+    const {'1': 'vest_lent', '3': 31, '4': 1, '5': 11, '6': '.prototype.vest', '10': 'vestLent'},
+    const {'1': 'vest_delivering', '3': 32, '4': 1, '5': 11, '6': '.prototype.vest', '10': 'vestDelivering'},
+    const {'1': 'vest_owned', '3': 33, '4': 1, '5': 11, '6': '.prototype.vest', '10': 'vestOwned'},
+    const {'1': 'vest_self', '3': 34, '4': 1, '5': 11, '6': '.prototype.vest', '10': 'vestSelf'},
   ],
 };
 
@@ -908,6 +913,37 @@ const GetBlockProducerVoterListResponse$json = const {
   '1': 'GetBlockProducerVoterListResponse',
   '2': const [
     const {'1': 'voter', '3': 1, '4': 3, '5': 11, '6': '.grpcpb.BlockProducerVoterResponse', '10': 'voter'},
+  ],
+};
+
+const VestDelegationOrder$json = const {
+  '1': 'VestDelegationOrder',
+  '2': const [
+    const {'1': 'id', '3': 1, '4': 1, '5': 4, '10': 'id'},
+    const {'1': 'from_account', '3': 2, '4': 1, '5': 11, '6': '.prototype.account_name', '10': 'fromAccount'},
+    const {'1': 'to_account', '3': 3, '4': 1, '5': 11, '6': '.prototype.account_name', '10': 'toAccount'},
+    const {'1': 'amount', '3': 4, '4': 1, '5': 11, '6': '.prototype.vest', '10': 'amount'},
+    const {'1': 'created_block', '3': 5, '4': 1, '5': 4, '10': 'createdBlock'},
+    const {'1': 'maturity_block', '3': 6, '4': 1, '5': 4, '10': 'maturityBlock'},
+    const {'1': 'delivery_block', '3': 7, '4': 1, '5': 4, '10': 'deliveryBlock'},
+    const {'1': 'delivering', '3': 8, '4': 1, '5': 8, '10': 'delivering'},
+  ],
+};
+
+const GetVestDelegationOrderListRequest$json = const {
+  '1': 'GetVestDelegationOrderListRequest',
+  '2': const [
+    const {'1': 'account', '3': 1, '4': 1, '5': 11, '6': '.prototype.account_name', '10': 'account'},
+    const {'1': 'is_from', '3': 2, '4': 1, '5': 8, '10': 'isFrom'},
+    const {'1': 'limit', '3': 3, '4': 1, '5': 13, '10': 'limit'},
+    const {'1': 'last_order_id', '3': 4, '4': 1, '5': 4, '10': 'lastOrderId'},
+  ],
+};
+
+const GetVestDelegationOrderListResponse$json = const {
+  '1': 'GetVestDelegationOrderListResponse',
+  '2': const [
+    const {'1': 'orders', '3': 1, '4': 3, '5': 11, '6': '.grpcpb.VestDelegationOrder', '10': 'orders'},
   ],
 };
 

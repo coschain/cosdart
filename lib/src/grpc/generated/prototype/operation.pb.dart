@@ -1280,3 +1280,113 @@ class vote_by_ticket_operation extends $pb.GeneratedMessage {
   void clearCount() => clearField(3);
 }
 
+class delegate_vest_operation extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('delegate_vest_operation', package: const $pb.PackageName('prototype'), createEmptyInstance: create)
+    ..aOM<$0.account_name>(1, 'from', subBuilder: $0.account_name.create)
+    ..aOM<$0.account_name>(2, 'to', subBuilder: $0.account_name.create)
+    ..aOM<$0.vest>(3, 'amount', subBuilder: $0.vest.create)
+    ..a<$fixnum.Int64>(4, 'expiration', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..hasRequiredFields = false
+  ;
+
+  delegate_vest_operation._() : super();
+  factory delegate_vest_operation() => create();
+  factory delegate_vest_operation.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory delegate_vest_operation.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  delegate_vest_operation clone() => delegate_vest_operation()..mergeFromMessage(this);
+  delegate_vest_operation copyWith(void Function(delegate_vest_operation) updates) => super.copyWith((message) => updates(message as delegate_vest_operation));
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static delegate_vest_operation create() => delegate_vest_operation._();
+  delegate_vest_operation createEmptyInstance() => create();
+  static $pb.PbList<delegate_vest_operation> createRepeated() => $pb.PbList<delegate_vest_operation>();
+  @$core.pragma('dart2js:noInline')
+  static delegate_vest_operation getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<delegate_vest_operation>(create);
+  static delegate_vest_operation _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $0.account_name get from => $_getN(0);
+  @$pb.TagNumber(1)
+  set from($0.account_name v) { setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasFrom() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearFrom() => clearField(1);
+  @$pb.TagNumber(1)
+  $0.account_name ensureFrom() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  $0.account_name get to => $_getN(1);
+  @$pb.TagNumber(2)
+  set to($0.account_name v) { setField(2, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasTo() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearTo() => clearField(2);
+  @$pb.TagNumber(2)
+  $0.account_name ensureTo() => $_ensure(1);
+
+  @$pb.TagNumber(3)
+  $0.vest get amount => $_getN(2);
+  @$pb.TagNumber(3)
+  set amount($0.vest v) { setField(3, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasAmount() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearAmount() => clearField(3);
+  @$pb.TagNumber(3)
+  $0.vest ensureAmount() => $_ensure(2);
+
+  @$pb.TagNumber(4)
+  $fixnum.Int64 get expiration => $_getI64(3);
+  @$pb.TagNumber(4)
+  set expiration($fixnum.Int64 v) { $_setInt64(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasExpiration() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearExpiration() => clearField(4);
+}
+
+class un_delegate_vest_operation extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('un_delegate_vest_operation', package: const $pb.PackageName('prototype'), createEmptyInstance: create)
+    ..aOM<$0.account_name>(1, 'account', subBuilder: $0.account_name.create)
+    ..a<$fixnum.Int64>(2, 'orderId', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..hasRequiredFields = false
+  ;
+
+  un_delegate_vest_operation._() : super();
+  factory un_delegate_vest_operation() => create();
+  factory un_delegate_vest_operation.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory un_delegate_vest_operation.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  un_delegate_vest_operation clone() => un_delegate_vest_operation()..mergeFromMessage(this);
+  un_delegate_vest_operation copyWith(void Function(un_delegate_vest_operation) updates) => super.copyWith((message) => updates(message as un_delegate_vest_operation));
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static un_delegate_vest_operation create() => un_delegate_vest_operation._();
+  un_delegate_vest_operation createEmptyInstance() => create();
+  static $pb.PbList<un_delegate_vest_operation> createRepeated() => $pb.PbList<un_delegate_vest_operation>();
+  @$core.pragma('dart2js:noInline')
+  static un_delegate_vest_operation getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<un_delegate_vest_operation>(create);
+  static un_delegate_vest_operation _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $0.account_name get account => $_getN(0);
+  @$pb.TagNumber(1)
+  set account($0.account_name v) { setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasAccount() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearAccount() => clearField(1);
+  @$pb.TagNumber(1)
+  $0.account_name ensureAccount() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  $fixnum.Int64 get orderId => $_getI64(1);
+  @$pb.TagNumber(2)
+  set orderId($fixnum.Int64 v) { $_setInt64(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasOrderId() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearOrderId() => clearField(2);
+}
+

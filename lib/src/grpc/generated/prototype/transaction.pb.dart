@@ -33,6 +33,8 @@ enum operation_Op {
   op20, 
   op21, 
   op22, 
+  op23, 
+  op24, 
   notSet
 }
 
@@ -57,10 +59,12 @@ class operation extends $pb.GeneratedMessage {
     20 : operation_Op.op20,
     21 : operation_Op.op21,
     22 : operation_Op.op22,
+    23 : operation_Op.op23,
+    24 : operation_Op.op24,
     0 : operation_Op.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('operation', package: const $pb.PackageName('prototype'), createEmptyInstance: create)
-    ..oo(0, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 13, 14, 16, 17, 18, 19, 20, 21, 22])
+    ..oo(0, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 13, 14, 16, 17, 18, 19, 20, 21, 22, 23, 24])
     ..aOM<$1.account_create_operation>(1, 'op1', subBuilder: $1.account_create_operation.create)
     ..aOM<$1.transfer_operation>(2, 'op2', subBuilder: $1.transfer_operation.create)
     ..aOM<$1.bp_register_operation>(3, 'op3', subBuilder: $1.bp_register_operation.create)
@@ -80,6 +84,8 @@ class operation extends $pb.GeneratedMessage {
     ..aOM<$1.account_update_operation>(20, 'op20', subBuilder: $1.account_update_operation.create)
     ..aOM<$1.acquire_ticket_operation>(21, 'op21', subBuilder: $1.acquire_ticket_operation.create)
     ..aOM<$1.vote_by_ticket_operation>(22, 'op22', subBuilder: $1.vote_by_ticket_operation.create)
+    ..aOM<$1.delegate_vest_operation>(23, 'op23', subBuilder: $1.delegate_vest_operation.create)
+    ..aOM<$1.un_delegate_vest_operation>(24, 'op24', subBuilder: $1.un_delegate_vest_operation.create)
     ..hasRequiredFields = false
   ;
 
@@ -309,6 +315,28 @@ class operation extends $pb.GeneratedMessage {
   void clearOp22() => clearField(22);
   @$pb.TagNumber(22)
   $1.vote_by_ticket_operation ensureOp22() => $_ensure(18);
+
+  @$pb.TagNumber(23)
+  $1.delegate_vest_operation get op23 => $_getN(19);
+  @$pb.TagNumber(23)
+  set op23($1.delegate_vest_operation v) { setField(23, v); }
+  @$pb.TagNumber(23)
+  $core.bool hasOp23() => $_has(19);
+  @$pb.TagNumber(23)
+  void clearOp23() => clearField(23);
+  @$pb.TagNumber(23)
+  $1.delegate_vest_operation ensureOp23() => $_ensure(19);
+
+  @$pb.TagNumber(24)
+  $1.un_delegate_vest_operation get op24 => $_getN(20);
+  @$pb.TagNumber(24)
+  set op24($1.un_delegate_vest_operation v) { setField(24, v); }
+  @$pb.TagNumber(24)
+  $core.bool hasOp24() => $_has(20);
+  @$pb.TagNumber(24)
+  void clearOp24() => clearField(24);
+  @$pb.TagNumber(24)
+  $1.un_delegate_vest_operation ensureOp24() => $_ensure(20);
 }
 
 class transaction extends $pb.GeneratedMessage {

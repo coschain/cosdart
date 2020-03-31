@@ -486,6 +486,11 @@ class AccountInfo extends $pb.GeneratedMessage {
     ..aOS(27, 'freezeMemo')
     ..aOM<$1.vest>(28, 'stakeVestFromMe', subBuilder: $1.vest.create)
     ..aOM<$1.account_name>(29, 'votedBlockProducer', subBuilder: $1.account_name.create)
+    ..aOM<$1.vest>(30, 'vestBorrowed', subBuilder: $1.vest.create)
+    ..aOM<$1.vest>(31, 'vestLent', subBuilder: $1.vest.create)
+    ..aOM<$1.vest>(32, 'vestDelivering', subBuilder: $1.vest.create)
+    ..aOM<$1.vest>(33, 'vestOwned', subBuilder: $1.vest.create)
+    ..aOM<$1.vest>(34, 'vestSelf', subBuilder: $1.vest.create)
     ..hasRequiredFields = false
   ;
 
@@ -792,6 +797,61 @@ class AccountInfo extends $pb.GeneratedMessage {
   void clearVotedBlockProducer() => clearField(29);
   @$pb.TagNumber(29)
   $1.account_name ensureVotedBlockProducer() => $_ensure(28);
+
+  @$pb.TagNumber(30)
+  $1.vest get vestBorrowed => $_getN(29);
+  @$pb.TagNumber(30)
+  set vestBorrowed($1.vest v) { setField(30, v); }
+  @$pb.TagNumber(30)
+  $core.bool hasVestBorrowed() => $_has(29);
+  @$pb.TagNumber(30)
+  void clearVestBorrowed() => clearField(30);
+  @$pb.TagNumber(30)
+  $1.vest ensureVestBorrowed() => $_ensure(29);
+
+  @$pb.TagNumber(31)
+  $1.vest get vestLent => $_getN(30);
+  @$pb.TagNumber(31)
+  set vestLent($1.vest v) { setField(31, v); }
+  @$pb.TagNumber(31)
+  $core.bool hasVestLent() => $_has(30);
+  @$pb.TagNumber(31)
+  void clearVestLent() => clearField(31);
+  @$pb.TagNumber(31)
+  $1.vest ensureVestLent() => $_ensure(30);
+
+  @$pb.TagNumber(32)
+  $1.vest get vestDelivering => $_getN(31);
+  @$pb.TagNumber(32)
+  set vestDelivering($1.vest v) { setField(32, v); }
+  @$pb.TagNumber(32)
+  $core.bool hasVestDelivering() => $_has(31);
+  @$pb.TagNumber(32)
+  void clearVestDelivering() => clearField(32);
+  @$pb.TagNumber(32)
+  $1.vest ensureVestDelivering() => $_ensure(31);
+
+  @$pb.TagNumber(33)
+  $1.vest get vestOwned => $_getN(32);
+  @$pb.TagNumber(33)
+  set vestOwned($1.vest v) { setField(33, v); }
+  @$pb.TagNumber(33)
+  $core.bool hasVestOwned() => $_has(32);
+  @$pb.TagNumber(33)
+  void clearVestOwned() => clearField(33);
+  @$pb.TagNumber(33)
+  $1.vest ensureVestOwned() => $_ensure(32);
+
+  @$pb.TagNumber(34)
+  $1.vest get vestSelf => $_getN(33);
+  @$pb.TagNumber(34)
+  set vestSelf($1.vest v) { setField(34, v); }
+  @$pb.TagNumber(34)
+  $core.bool hasVestSelf() => $_has(33);
+  @$pb.TagNumber(34)
+  void clearVestSelf() => clearField(34);
+  @$pb.TagNumber(34)
+  $1.vest ensureVestSelf() => $_ensure(33);
 }
 
 class AccountResponse extends $pb.GeneratedMessage {
@@ -4923,5 +4983,200 @@ class GetBlockProducerVoterListResponse extends $pb.GeneratedMessage {
 
   @$pb.TagNumber(1)
   $core.List<BlockProducerVoterResponse> get voter => $_getList(0);
+}
+
+class VestDelegationOrder extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('VestDelegationOrder', package: const $pb.PackageName('grpcpb'), createEmptyInstance: create)
+    ..a<$fixnum.Int64>(1, 'id', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..aOM<$1.account_name>(2, 'fromAccount', subBuilder: $1.account_name.create)
+    ..aOM<$1.account_name>(3, 'toAccount', subBuilder: $1.account_name.create)
+    ..aOM<$1.vest>(4, 'amount', subBuilder: $1.vest.create)
+    ..a<$fixnum.Int64>(5, 'createdBlock', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..a<$fixnum.Int64>(6, 'maturityBlock', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..a<$fixnum.Int64>(7, 'deliveryBlock', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..aOB(8, 'delivering')
+    ..hasRequiredFields = false
+  ;
+
+  VestDelegationOrder._() : super();
+  factory VestDelegationOrder() => create();
+  factory VestDelegationOrder.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory VestDelegationOrder.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  VestDelegationOrder clone() => VestDelegationOrder()..mergeFromMessage(this);
+  VestDelegationOrder copyWith(void Function(VestDelegationOrder) updates) => super.copyWith((message) => updates(message as VestDelegationOrder));
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static VestDelegationOrder create() => VestDelegationOrder._();
+  VestDelegationOrder createEmptyInstance() => create();
+  static $pb.PbList<VestDelegationOrder> createRepeated() => $pb.PbList<VestDelegationOrder>();
+  @$core.pragma('dart2js:noInline')
+  static VestDelegationOrder getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<VestDelegationOrder>(create);
+  static VestDelegationOrder _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $fixnum.Int64 get id => $_getI64(0);
+  @$pb.TagNumber(1)
+  set id($fixnum.Int64 v) { $_setInt64(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $1.account_name get fromAccount => $_getN(1);
+  @$pb.TagNumber(2)
+  set fromAccount($1.account_name v) { setField(2, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasFromAccount() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearFromAccount() => clearField(2);
+  @$pb.TagNumber(2)
+  $1.account_name ensureFromAccount() => $_ensure(1);
+
+  @$pb.TagNumber(3)
+  $1.account_name get toAccount => $_getN(2);
+  @$pb.TagNumber(3)
+  set toAccount($1.account_name v) { setField(3, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasToAccount() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearToAccount() => clearField(3);
+  @$pb.TagNumber(3)
+  $1.account_name ensureToAccount() => $_ensure(2);
+
+  @$pb.TagNumber(4)
+  $1.vest get amount => $_getN(3);
+  @$pb.TagNumber(4)
+  set amount($1.vest v) { setField(4, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasAmount() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearAmount() => clearField(4);
+  @$pb.TagNumber(4)
+  $1.vest ensureAmount() => $_ensure(3);
+
+  @$pb.TagNumber(5)
+  $fixnum.Int64 get createdBlock => $_getI64(4);
+  @$pb.TagNumber(5)
+  set createdBlock($fixnum.Int64 v) { $_setInt64(4, v); }
+  @$pb.TagNumber(5)
+  $core.bool hasCreatedBlock() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearCreatedBlock() => clearField(5);
+
+  @$pb.TagNumber(6)
+  $fixnum.Int64 get maturityBlock => $_getI64(5);
+  @$pb.TagNumber(6)
+  set maturityBlock($fixnum.Int64 v) { $_setInt64(5, v); }
+  @$pb.TagNumber(6)
+  $core.bool hasMaturityBlock() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearMaturityBlock() => clearField(6);
+
+  @$pb.TagNumber(7)
+  $fixnum.Int64 get deliveryBlock => $_getI64(6);
+  @$pb.TagNumber(7)
+  set deliveryBlock($fixnum.Int64 v) { $_setInt64(6, v); }
+  @$pb.TagNumber(7)
+  $core.bool hasDeliveryBlock() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearDeliveryBlock() => clearField(7);
+
+  @$pb.TagNumber(8)
+  $core.bool get delivering => $_getBF(7);
+  @$pb.TagNumber(8)
+  set delivering($core.bool v) { $_setBool(7, v); }
+  @$pb.TagNumber(8)
+  $core.bool hasDelivering() => $_has(7);
+  @$pb.TagNumber(8)
+  void clearDelivering() => clearField(8);
+}
+
+class GetVestDelegationOrderListRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetVestDelegationOrderListRequest', package: const $pb.PackageName('grpcpb'), createEmptyInstance: create)
+    ..aOM<$1.account_name>(1, 'account', subBuilder: $1.account_name.create)
+    ..aOB(2, 'isFrom')
+    ..a<$core.int>(3, 'limit', $pb.PbFieldType.OU3)
+    ..a<$fixnum.Int64>(4, 'lastOrderId', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..hasRequiredFields = false
+  ;
+
+  GetVestDelegationOrderListRequest._() : super();
+  factory GetVestDelegationOrderListRequest() => create();
+  factory GetVestDelegationOrderListRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory GetVestDelegationOrderListRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  GetVestDelegationOrderListRequest clone() => GetVestDelegationOrderListRequest()..mergeFromMessage(this);
+  GetVestDelegationOrderListRequest copyWith(void Function(GetVestDelegationOrderListRequest) updates) => super.copyWith((message) => updates(message as GetVestDelegationOrderListRequest));
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static GetVestDelegationOrderListRequest create() => GetVestDelegationOrderListRequest._();
+  GetVestDelegationOrderListRequest createEmptyInstance() => create();
+  static $pb.PbList<GetVestDelegationOrderListRequest> createRepeated() => $pb.PbList<GetVestDelegationOrderListRequest>();
+  @$core.pragma('dart2js:noInline')
+  static GetVestDelegationOrderListRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GetVestDelegationOrderListRequest>(create);
+  static GetVestDelegationOrderListRequest _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $1.account_name get account => $_getN(0);
+  @$pb.TagNumber(1)
+  set account($1.account_name v) { setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasAccount() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearAccount() => clearField(1);
+  @$pb.TagNumber(1)
+  $1.account_name ensureAccount() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  $core.bool get isFrom => $_getBF(1);
+  @$pb.TagNumber(2)
+  set isFrom($core.bool v) { $_setBool(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasIsFrom() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearIsFrom() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.int get limit => $_getIZ(2);
+  @$pb.TagNumber(3)
+  set limit($core.int v) { $_setUnsignedInt32(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasLimit() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearLimit() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $fixnum.Int64 get lastOrderId => $_getI64(3);
+  @$pb.TagNumber(4)
+  set lastOrderId($fixnum.Int64 v) { $_setInt64(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasLastOrderId() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearLastOrderId() => clearField(4);
+}
+
+class GetVestDelegationOrderListResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetVestDelegationOrderListResponse', package: const $pb.PackageName('grpcpb'), createEmptyInstance: create)
+    ..pc<VestDelegationOrder>(1, 'orders', $pb.PbFieldType.PM, subBuilder: VestDelegationOrder.create)
+    ..hasRequiredFields = false
+  ;
+
+  GetVestDelegationOrderListResponse._() : super();
+  factory GetVestDelegationOrderListResponse() => create();
+  factory GetVestDelegationOrderListResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory GetVestDelegationOrderListResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  GetVestDelegationOrderListResponse clone() => GetVestDelegationOrderListResponse()..mergeFromMessage(this);
+  GetVestDelegationOrderListResponse copyWith(void Function(GetVestDelegationOrderListResponse) updates) => super.copyWith((message) => updates(message as GetVestDelegationOrderListResponse));
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static GetVestDelegationOrderListResponse create() => GetVestDelegationOrderListResponse._();
+  GetVestDelegationOrderListResponse createEmptyInstance() => create();
+  static $pb.PbList<GetVestDelegationOrderListResponse> createRepeated() => $pb.PbList<GetVestDelegationOrderListResponse>();
+  @$core.pragma('dart2js:noInline')
+  static GetVestDelegationOrderListResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GetVestDelegationOrderListResponse>(create);
+  static GetVestDelegationOrderListResponse _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<VestDelegationOrder> get orders => $_getList(0);
 }
 

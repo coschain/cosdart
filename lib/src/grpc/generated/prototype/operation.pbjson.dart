@@ -238,3 +238,21 @@ const vote_by_ticket_operation$json = const {
   ],
 };
 
+const delegate_vest_operation$json = const {
+  '1': 'delegate_vest_operation',
+  '2': const [
+    const {'1': 'from', '3': 1, '4': 1, '5': 11, '6': '.prototype.account_name', '10': 'from'},
+    const {'1': 'to', '3': 2, '4': 1, '5': 11, '6': '.prototype.account_name', '10': 'to'},
+    const {'1': 'amount', '3': 3, '4': 1, '5': 11, '6': '.prototype.vest', '10': 'amount'},
+    const {'1': 'expiration', '3': 4, '4': 1, '5': 4, '10': 'expiration'},
+  ],
+};
+
+const un_delegate_vest_operation$json = const {
+  '1': 'un_delegate_vest_operation',
+  '2': const [
+    const {'1': 'account', '3': 1, '4': 1, '5': 11, '6': '.prototype.account_name', '10': 'account'},
+    const {'1': 'order_id', '3': 2, '4': 1, '5': 4, '10': 'orderId'},
+  ],
+};
+

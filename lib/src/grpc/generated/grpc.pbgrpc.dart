@@ -260,6 +260,13 @@ class ApiServiceClient extends $grpc.Client {
       ($0.GetBlockProducerVoterListRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) =>
           $0.GetBlockProducerVoterListResponse.fromBuffer(value));
+  static final _$getVestDelegationOrderList = $grpc.ClientMethod<
+          $0.GetVestDelegationOrderListRequest,
+          $0.GetVestDelegationOrderListResponse>(
+      '/grpcpb.ApiService/GetVestDelegationOrderList',
+      ($0.GetVestDelegationOrderListRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) =>
+          $0.GetVestDelegationOrderListResponse.fromBuffer(value));
 
   ApiServiceClient($grpc.ClientChannel channel, {$grpc.CallOptions options})
       : super(channel, options: options);
@@ -621,6 +628,15 @@ class ApiServiceClient extends $grpc.Client {
           {$grpc.CallOptions options}) {
     final call = $createCall(
         _$getBlockProducerVoterList, $async.Stream.fromIterable([request]),
+        options: options);
+    return $grpc.ResponseFuture(call);
+  }
+
+  $grpc.ResponseFuture<$0.GetVestDelegationOrderListResponse>
+      getVestDelegationOrderList($0.GetVestDelegationOrderListRequest request,
+          {$grpc.CallOptions options}) {
+    final call = $createCall(
+        _$getVestDelegationOrderList, $async.Stream.fromIterable([request]),
         options: options);
     return $grpc.ResponseFuture(call);
   }
@@ -988,6 +1004,16 @@ abstract class ApiServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.GetBlockProducerVoterListRequest.fromBuffer(value),
         ($0.GetBlockProducerVoterListResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.GetVestDelegationOrderListRequest,
+            $0.GetVestDelegationOrderListResponse>(
+        'GetVestDelegationOrderList',
+        getVestDelegationOrderList_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.GetVestDelegationOrderListRequest.fromBuffer(value),
+        ($0.GetVestDelegationOrderListResponse value) =>
+            value.writeToBuffer()));
   }
 
   $async.Future<$0.TableContentResponse> queryTableContent_Pre(
@@ -1230,6 +1256,12 @@ abstract class ApiServiceBase extends $grpc.Service {
     return getBlockProducerVoterList(call, await request);
   }
 
+  $async.Future<$0.GetVestDelegationOrderListResponse>
+      getVestDelegationOrderList_Pre($grpc.ServiceCall call,
+          $async.Future<$0.GetVestDelegationOrderListRequest> request) async {
+    return getVestDelegationOrderList(call, await request);
+  }
+
   $async.Future<$0.TableContentResponse> queryTableContent(
       $grpc.ServiceCall call, $0.GetTableContentRequest request);
   $async.Future<$0.AccountResponse> getAccountByName(
@@ -1312,4 +1344,7 @@ abstract class ApiServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $0.GetAppTableRecordRequest request);
   $async.Future<$0.GetBlockProducerVoterListResponse> getBlockProducerVoterList(
       $grpc.ServiceCall call, $0.GetBlockProducerVoterListRequest request);
+  $async.Future<$0.GetVestDelegationOrderListResponse>
+      getVestDelegationOrderList(
+          $grpc.ServiceCall call, $0.GetVestDelegationOrderListRequest request);
 }
