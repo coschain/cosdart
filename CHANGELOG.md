@@ -1,3 +1,7 @@
+## [0.2.2] - 2020/3/31
+
+- updated gRPC interfaces to support main-net v1.0.8.
+
 ## [0.2.1] - 2020/1/19
 
 - fixed a network config bug which may lead to connection failures.
