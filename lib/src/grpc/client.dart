@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'package:crclib/catalog.dart';
 import 'package:crclib/crclib.dart';
 import 'package:grpc/grpc.dart';
 import 'package:grpc/service_api.dart' as $grpc;
@@ -42,17 +43,16 @@ class Network {
 
 abstract class CosChainReader {
   $grpc.ResponseFuture<GetChainStateResponse> getChainState();
+
   $grpc.ResponseFuture<AccountResponse> getAccountByName(String name);
 }
 
-abstract class CosChainWriter {
-
-}
+abstract class CosChainWriter {}
 
 /// A gRPC client that communicates with Contentos block chain.
 class CosChainClient implements CosChainReader, CosChainWriter {
-  ApiServiceClient _client;
-  int _network;
+  late ApiServiceClient _client;
+  late int _network;
 
   /// the network id.
   int get network => _network;
@@ -60,23 +60,23 @@ class CosChainClient implements CosChainReader, CosChainWriter {
   /// Creates an instance of gRPC client.
   /// [host] and [port] specify the gRPC server, [secure] should be set if HTTPS
   /// is used. [networkId] is required for digital signatures.
-  CosChainClient(String networkId, String host, int port, bool secure) {
-    final ClientChannel channel = ClientChannel(host,
-        port: port,
-        options: ChannelOptions(
-          credentials: secure
-              ? const ChannelCredentials.secure()
-              : const ChannelCredentials.insecure()
-    ));
-    _client = ApiServiceClient(channel, options: CallOptions(
-      timeout: Duration(seconds: 30)
-    ));
-    _network = Crc32Zlib().convert(utf8.encode(networkId));
+  String networkId;
+  String host;
+  int port;
+  bool secure;
+
+  CosChainClient(this.networkId, this.host, this.port, this.secure) {
+    final ClientChannel channel = ClientChannel(
+      host,
+      port: port,
+      options: ChannelOptions(credentials: secure ? const ChannelCredentials.secure() : const ChannelCredentials.insecure()),
+    );
+    _client = ApiServiceClient(channel, options: CallOptions(timeout: Duration(seconds: 30)));
+    _network = Crc32Xz().convert(utf8.encode(networkId)).toBigInt().toInt();
   }
 
   /// Creates an instance of gRPC client for given [network].
-  CosChainClient.of(Network network):
-        this(network.id, network.host, network.port, network.isSecure);
+  CosChainClient.of(Network network) : this(network.id, network.host, network.port, network.isSecure);
 
   /// Returns global information of the block chain.
   $grpc.ResponseFuture<GetChainStateResponse> getChainState() {
@@ -85,11 +85,9 @@ class CosChainClient implements CosChainReader, CosChainWriter {
 
   /// Returns account information based on given account [name].
   $grpc.ResponseFuture<AccountResponse> getAccountByName(String name) {
-    return _client.getAccountByName(GetAccountByNameRequest()
-      ..accountName = _accountName(name));
+    return _client.getAccountByName(GetAccountByNameRequest()..accountName = _accountName(name));
   }
 }
-
 
 account_name _accountName(String name) {
   return account_name()..value = name;

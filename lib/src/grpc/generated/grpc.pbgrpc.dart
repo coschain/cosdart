@@ -2,8 +2,8 @@
 //  Generated code. Do not modify.
 //  source: grpc.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
 import 'dart:async' as $async;
 
@@ -268,377 +268,266 @@ class ApiServiceClient extends $grpc.Client {
       ($core.List<$core.int> value) =>
           $0.GetVestDelegationOrderListResponse.fromBuffer(value));
 
-  ApiServiceClient($grpc.ClientChannel channel, {$grpc.CallOptions options})
-      : super(channel, options: options);
+  ApiServiceClient($grpc.ClientChannel channel,
+      {$grpc.CallOptions? options,
+      $core.Iterable<$grpc.ClientInterceptor>? interceptors})
+      : super(channel, options: options, interceptors: interceptors);
 
   $grpc.ResponseFuture<$0.TableContentResponse> queryTableContent(
       $0.GetTableContentRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$queryTableContent, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$queryTableContent, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.AccountResponse> getAccountByName(
       $0.GetAccountByNameRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$getAccountByName, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getAccountByName, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.GetFollowerListByNameResponse> getFollowerListByName(
       $0.GetFollowerListByNameRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$getFollowerListByName, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getFollowerListByName, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.GetFollowingListByNameResponse>
       getFollowingListByName($0.GetFollowingListByNameRequest request,
-          {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$getFollowingListByName, $async.Stream.fromIterable([request]),
+          {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getFollowingListByName, request,
         options: options);
-    return $grpc.ResponseFuture(call);
   }
 
   $grpc.ResponseFuture<$0.GetFollowCountByNameResponse> getFollowCountByName(
       $0.GetFollowCountByNameRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$getFollowCountByName, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getFollowCountByName, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.GetBlockProducerListResponse> getBlockProducerList(
       $0.GetBlockProducerListRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$getBlockProducerList, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getBlockProducerList, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.GetPostListByCreatedResponse> getPostListByCreated(
       $0.GetPostListByCreatedRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$getPostListByCreated, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getPostListByCreated, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.GetReplyListByPostIdResponse> getReplyListByPostId(
       $0.GetReplyListByPostIdRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$getReplyListByPostId, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getReplyListByPostId, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.GetBlockTransactionsByNumResponse>
       getBlockTransactionsByNum($0.GetBlockTransactionsByNumRequest request,
-          {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$getBlockTransactionsByNum, $async.Stream.fromIterable([request]),
+          {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getBlockTransactionsByNum, request,
         options: options);
-    return $grpc.ResponseFuture(call);
   }
 
   $grpc.ResponseFuture<$0.GetChainStateResponse> getChainState(
       $0.NonParamsRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$getChainState, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getChainState, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.BroadcastTrxResponse> broadcastTrx(
       $0.BroadcastTrxRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$broadcastTrx, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$broadcastTrx, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.GetBlockListResponse> getBlockList(
       $0.GetBlockListRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$getBlockList, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getBlockList, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.GetSignedBlockResponse> getSignedBlock(
       $0.GetSignedBlockRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$getSignedBlock, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getSignedBlock, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.GetAccountListResponse> getAccountListByBalance(
       $0.GetAccountListByBalanceRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$getAccountListByBalance, $async.Stream.fromIterable([request]),
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getAccountListByBalance, request,
         options: options);
-    return $grpc.ResponseFuture(call);
   }
 
   $grpc.ResponseFuture<$0.GetDailyTotalTrxResponse> getDailyTotalTrxInfo(
       $0.GetDailyTotalTrxRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$getDailyTotalTrxInfo, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getDailyTotalTrxInfo, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.GetTrxInfoByIdResponse> getTrxInfoById(
       $0.GetTrxInfoByIdRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$getTrxInfoById, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getTrxInfoById, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.GetTrxListByTimeResponse> getTrxListByTime(
       $0.GetTrxListByTimeRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$getTrxListByTime, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getTrxListByTime, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.GetPostListByCreateTimeResponse>
       getPostListByCreateTime($0.GetPostListByCreateTimeRequest request,
-          {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$getPostListByCreateTime, $async.Stream.fromIterable([request]),
+          {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getPostListByCreateTime, request,
         options: options);
-    return $grpc.ResponseFuture(call);
   }
 
   $grpc.ResponseFuture<$0.GetPostListByCreateTimeResponse> getPostListByName(
       $0.GetPostListByNameRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$getPostListByName, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getPostListByName, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.TrxStatByHourResponse> trxStatByHour(
       $0.TrxStatByHourRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$trxStatByHour, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$trxStatByHour, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.GetUserTrxListByTimeResponse> getUserTrxListByTime(
       $0.GetUserTrxListByTimeRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$getUserTrxListByTime, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getUserTrxListByTime, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.GetPostInfoByIdResponse> getPostInfoById(
       $0.GetPostInfoByIdRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$getPostInfoById, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getPostInfoById, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.GetContractInfoResponse> getContractInfo(
       $0.GetContractInfoRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$getContractInfo, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getContractInfo, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.GetBlkIsIrreversibleByTxIdResponse>
       getBlkIsIrreversibleByTxId($0.GetBlkIsIrreversibleByTxIdRequest request,
-          {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$getBlkIsIrreversibleByTxId, $async.Stream.fromIterable([request]),
+          {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getBlkIsIrreversibleByTxId, request,
         options: options);
-    return $grpc.ResponseFuture(call);
   }
 
   $grpc.ResponseFuture<$0.GetAccountListResponse> getAccountListByCreTime(
       $0.GetAccountListByCreTimeRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$getAccountListByCreTime, $async.Stream.fromIterable([request]),
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getAccountListByCreTime, request,
         options: options);
-    return $grpc.ResponseFuture(call);
   }
 
   $grpc.ResponseFuture<$0.GetDailyStatsResponse> getDailyStats(
       $0.GetDailyStatsRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$getDailyStats, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getDailyStats, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.GetContractListResponse> getContractListByTime(
       $0.GetContractListByTimeRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$getContractListByTime, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getContractListByTime, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.GetBlockProducerListResponse>
       getBlockProducerListByVoteCount(
           $0.GetBlockProducerListByVoteCountRequest request,
-          {$grpc.CallOptions options}) {
-    final call = $createCall(_$getBlockProducerListByVoteCount,
-        $async.Stream.fromIterable([request]),
+          {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getBlockProducerListByVoteCount, request,
         options: options);
-    return $grpc.ResponseFuture(call);
   }
 
   $grpc.ResponseFuture<$0.GetPostListByVestResponse> getPostListByVest(
       $0.GetPostListByVestRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$getPostListByVest, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getPostListByVest, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.EsimateResponse> estimateStamina(
       $0.EsimateRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$estimateStamina, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$estimateStamina, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.GetNodeNeighboursResponse> getNodeNeighbours(
       $0.NonParamsRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$getNodeNeighbours, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getNodeNeighbours, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.GetMyStakerListByNameResponse> getMyStakers(
       $0.GetMyStakerListByNameRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$getMyStakers, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getMyStakers, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.GetMyStakeListByNameResponse> getMyStakes(
       $0.GetMyStakeListByNameRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$getMyStakes, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getMyStakes, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.GetNodeRunningVersionResponse> getNodeRunningVersion(
       $0.NonParamsRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$getNodeRunningVersion, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getNodeRunningVersion, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.GetAccountListResponse> getAccountListByVest(
       $0.GetAccountListByVestRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$getAccountListByVest, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getAccountListByVest, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.BlockProducerResponse> getBlockProducerByName(
       $0.GetBlockProducerByNameRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$getBlockProducerByName, $async.Stream.fromIterable([request]),
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getBlockProducerByName, request,
         options: options);
-    return $grpc.ResponseFuture(call);
   }
 
   $grpc.ResponseFuture<$0.AccountResponse> getAccountByPubKey(
       $0.GetAccountByPubKeyRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$getAccountByPubKey, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getAccountByPubKey, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.GetBlockBFTInfoByNumResponse> getBlockBFTInfoByNum(
       $0.GetBlockBFTInfoByNumRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$getBlockBFTInfoByNum, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getBlockBFTInfoByNum, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.GetAppTableRecordResponse> getAppTableRecord(
       $0.GetAppTableRecordRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$getAppTableRecord, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getAppTableRecord, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.GetBlockProducerVoterListResponse>
       getBlockProducerVoterList($0.GetBlockProducerVoterListRequest request,
-          {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$getBlockProducerVoterList, $async.Stream.fromIterable([request]),
+          {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getBlockProducerVoterList, request,
         options: options);
-    return $grpc.ResponseFuture(call);
   }
 
   $grpc.ResponseFuture<$0.GetVestDelegationOrderListResponse>
       getVestDelegationOrderList($0.GetVestDelegationOrderListRequest request,
-          {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$getVestDelegationOrderList, $async.Stream.fromIterable([request]),
+          {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getVestDelegationOrderList, request,
         options: options);
-    return $grpc.ResponseFuture(call);
   }
 }
 

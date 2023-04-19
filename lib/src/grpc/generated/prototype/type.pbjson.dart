@@ -2,9 +2,14 @@
 //  Generated code. Do not modify.
 //  source: prototype/type.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,deprecated_member_use_from_same_package,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
+import 'dart:core' as $core;
+import 'dart:convert' as $convert;
+import 'dart:typed_data' as $typed_data;
+
+@$core.Deprecated('Use account_nameDescriptor instead')
 const account_name$json = const {
   '1': 'account_name',
   '2': const [
@@ -12,6 +17,9 @@ const account_name$json = const {
   ],
 };
 
+/// Descriptor for `account_name`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List account_nameDescriptor = $convert.base64Decode('CgxhY2NvdW50X25hbWUSFAoFdmFsdWUYASABKAlSBXZhbHVl');
+@$core.Deprecated('Use chain_idDescriptor instead')
 const chain_id$json = const {
   '1': 'chain_id',
   '2': const [
@@ -19,6 +27,9 @@ const chain_id$json = const {
   ],
 };
 
+/// Descriptor for `chain_id`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List chain_idDescriptor = $convert.base64Decode('CghjaGFpbl9pZBIUCgV2YWx1ZRgBIAEoDVIFdmFsdWU=');
+@$core.Deprecated('Use coinDescriptor instead')
 const coin$json = const {
   '1': 'coin',
   '2': const [
@@ -33,6 +44,9 @@ const coin$json = const {
   ],
 };
 
+/// Descriptor for `coin`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List coinDescriptor = $convert.base64Decode('CgRjb2luEhgKBXZhbHVlGAEgASgEQgIwAVIFdmFsdWU=');
+@$core.Deprecated('Use vestDescriptor instead')
 const vest$json = const {
   '1': 'vest',
   '2': const [
@@ -47,6 +61,9 @@ const vest$json = const {
   ],
 };
 
+/// Descriptor for `vest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List vestDescriptor = $convert.base64Decode('CgR2ZXN0EhgKBXZhbHVlGAEgASgEQgIwAVIFdmFsdWU=');
+@$core.Deprecated('Use public_key_typeDescriptor instead')
 const public_key_type$json = const {
   '1': 'public_key_type',
   '2': const [
@@ -54,6 +71,9 @@ const public_key_type$json = const {
   ],
 };
 
+/// Descriptor for `public_key_type`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List public_key_typeDescriptor = $convert.base64Decode('Cg9wdWJsaWNfa2V5X3R5cGUSEgoEZGF0YRgBIAEoDFIEZGF0YQ==');
+@$core.Deprecated('Use private_key_typeDescriptor instead')
 const private_key_type$json = const {
   '1': 'private_key_type',
   '2': const [
@@ -61,6 +81,9 @@ const private_key_type$json = const {
   ],
 };
 
+/// Descriptor for `private_key_type`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List private_key_typeDescriptor = $convert.base64Decode('ChBwcml2YXRlX2tleV90eXBlEhIKBGRhdGEYASABKAxSBGRhdGE=');
+@$core.Deprecated('Use time_point_secDescriptor instead')
 const time_point_sec$json = const {
   '1': 'time_point_sec',
   '2': const [
@@ -68,6 +91,9 @@ const time_point_sec$json = const {
   ],
 };
 
+/// Descriptor for `time_point_sec`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List time_point_secDescriptor = $convert.base64Decode('Cg50aW1lX3BvaW50X3NlYxIfCgt1dGNfc2Vjb25kcxgBIAEoDVIKdXRjU2Vjb25kcw==');
+@$core.Deprecated('Use signature_typeDescriptor instead')
 const signature_type$json = const {
   '1': 'signature_type',
   '2': const [
@@ -75,6 +101,9 @@ const signature_type$json = const {
   ],
 };
 
+/// Descriptor for `signature_type`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List signature_typeDescriptor = $convert.base64Decode('Cg5zaWduYXR1cmVfdHlwZRIQCgNzaWcYASABKAxSA3NpZw==');
+@$core.Deprecated('Use sha256Descriptor instead')
 const sha256$json = const {
   '1': 'sha256',
   '2': const [
@@ -82,6 +111,9 @@ const sha256$json = const {
   ],
 };
 
+/// Descriptor for `sha256`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List sha256Descriptor = $convert.base64Decode('CgZzaGEyNTYSEgoEaGFzaBgBIAEoDFIEaGFzaA==');
+@$core.Deprecated('Use gift_ticket_key_typeDescriptor instead')
 const gift_ticket_key_type$json = const {
   '1': 'gift_ticket_key_type',
   '2': const [
@@ -92,6 +124,10 @@ const gift_ticket_key_type$json = const {
   ],
 };
 
+/// Descriptor for `gift_ticket_key_type`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List gift_ticket_key_typeDescriptor = $convert.base64Decode(
+    'ChRnaWZ0X3RpY2tldF9rZXlfdHlwZRISCgR0eXBlGAEgASgNUgR0eXBlEhIKBGZyb20YAiABKAlSBGZyb20SDgoCdG8YAyABKAlSAnRvEiEKDGNyZWF0ZV9ibG9jaxgEIAEoBFILY3JlYXRlQmxvY2s=');
+@$core.Deprecated('Use chain_propertiesDescriptor instead')
 const chain_properties$json = const {
   '1': 'chain_properties',
   '2': const [
@@ -105,6 +141,10 @@ const chain_properties$json = const {
   ],
 };
 
+/// Descriptor for `chain_properties`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List chain_propertiesDescriptor = $convert.base64Decode(
+    'ChBjaGFpbl9wcm9wZXJ0aWVzEkEKFGFjY291bnRfY3JlYXRpb25fZmVlGAEgASgLMg8ucHJvdG90eXBlLmNvaW5SEmFjY291bnRDcmVhdGlvbkZlZRIhCgxzdGFtaW5hX2ZyZWUYAiABKARSC3N0YW1pbmFGcmVlEiEKDHRwc19leHBlY3RlZBgDIAEoBFILdHBzRXhwZWN0ZWQSNgoYdG9wX25fYWNxdWlyZV9mcmVlX3Rva2VuGAQgASgNUhR0b3BOQWNxdWlyZUZyZWVUb2tlbhIlCg5lcG9jaF9kdXJhdGlvbhgFIAEoBFINZXBvY2hEdXJhdGlvbhI5ChBwZXJfdGlja2V0X3ByaWNlGAYgASgLMg8ucHJvdG90eXBlLmNvaW5SDnBlclRpY2tldFByaWNlEioKEXBlcl90aWNrZXRfd2VpZ2h0GAcgASgEUg9wZXJUaWNrZXRXZWlnaHQ=');
+@$core.Deprecated('Use dynamic_propertiesDescriptor instead')
 const dynamic_properties$json = const {
   '1': 'dynamic_properties',
   '2': const [
@@ -163,6 +203,10 @@ const dynamic_properties$json = const {
   ],
 };
 
+/// Descriptor for `dynamic_properties`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List dynamic_propertiesDescriptor = $convert.base64Decode(
+    'ChJkeW5hbWljX3Byb3BlcnRpZXMSNQoNaGVhZF9ibG9ja19pZBgBIAEoCzIRLnByb3RvdHlwZS5zaGEyNTZSC2hlYWRCbG9ja0lkEioKEWhlYWRfYmxvY2tfbnVtYmVyGAIgASgEUg9oZWFkQmxvY2tOdW1iZXISLAoJdG90YWxfY29zGAMgASgLMg8ucHJvdG90eXBlLmNvaW5SCHRvdGFsQ29zEi0KBHRpbWUYBCABKAsyGS5wcm90b3R5cGUudGltZV9wb2ludF9zZWNSBHRpbWUSTQoWY3VycmVudF9ibG9ja19wcm9kdWNlchgFIAEoCzIXLnByb3RvdHlwZS5hY2NvdW50X25hbWVSFGN1cnJlbnRCbG9ja1Byb2R1Y2VyEhAKA3RwcxgGIAEoDVIDdHBzEi4KCnRvdGFsX3Zlc3QYByABKAsyDy5wcm90b3R5cGUudmVzdFIJdG90YWxWZXN0EiIKDXRvdGFsX3RyeF9jbnQYCCABKARSC3RvdGFsVHJ4Q250EiQKDnRvdGFsX3Bvc3RfY250GAkgASgEUgx0b3RhbFBvc3RDbnQSJAoOdG90YWxfdXNlcl9jbnQYCiABKARSDHRvdGFsVXNlckNudBIXCgdtYXhfdHBzGAsgASgNUgZtYXhUcHMSLQoRbWF4X3Rwc19ibG9ja19udW0YDCABKARCAjABUg5tYXhUcHNCbG9ja051bRIZCghpdGhfeWVhchgNIAEoDVIHaXRoWWVhchI0Cg1hbm51YWxfYnVkZ2V0GA4gASgLMg8ucHJvdG90eXBlLnZlc3RSDGFubnVhbEJ1ZGdldBI0Cg1hbm51YWxfbWludGVkGA8gASgLMg8ucHJvdG90eXBlLnZlc3RSDGFubnVhbE1pbnRlZBI7ChFwb29sX3Bvc3RfcmV3YXJkcxgQIAEoCzIPLnByb3RvdHlwZS52ZXN0Ug9wb29sUG9zdFJld2FyZHMSPQoScG9vbF9yZXBseV9yZXdhcmRzGBEgASgLMg8ucHJvdG90eXBlLnZlc3RSEHBvb2xSZXBseVJld2FyZHMSOwoRcG9vbF92b3RlX3Jld2FyZHMYEiABKAsyDy5wcm90b3R5cGUudmVzdFIPcG9vbFZvdGVSZXdhcmRzEjsKEXBvb2xfZGFwcF9yZXdhcmRzGBMgASgLMg8ucHJvdG90eXBlLnZlc3RSD3Bvb2xEYXBwUmV3YXJkcxIqChF3ZWlnaHRlZF92cHNfcG9zdBgUIAEoCVIPd2VpZ2h0ZWRWcHNQb3N0EiwKEndlaWdodGVkX3Zwc19yZXBseRgVIAEoCVIQd2VpZ2h0ZWRWcHNSZXBseRIqChF3ZWlnaHRlZF92cHNfdm90ZRgWIAEoCVIPd2VpZ2h0ZWRWcHNWb3RlEioKEXdlaWdodGVkX3Zwc19kYXBwGBcgASgJUg93ZWlnaHRlZFZwc0RhcHASQQoUY2xhaW1lZF9wb3N0X3Jld2FyZHMYGCABKAsyDy5wcm90b3R5cGUudmVzdFISY2xhaW1lZFBvc3RSZXdhcmRzEkMKFWNsYWltZWRfcmVwbHlfcmV3YXJkcxgZIAEoCzIPLnByb3RvdHlwZS52ZXN0UhNjbGFpbWVkUmVwbHlSZXdhcmRzEkEKFGNsYWltZWRfdm90ZV9yZXdhcmRzGBogASgLMg8ucHJvdG90eXBlLnZlc3RSEmNsYWltZWRWb3RlUmV3YXJkcxJBChRjbGFpbWVkX2RhcHBfcmV3YXJkcxgbIAEoCzIPLnByb3RvdHlwZS52ZXN0UhJjbGFpbWVkRGFwcFJld2FyZHMSLgoKc3Rha2VfdmVzdBgcIAEoCzIPLnByb3RvdHlwZS52ZXN0UglzdGFrZVZlc3QSQQodYmxvY2tfcHJvZHVjZXJfYm9vdF9jb21wbGV0ZWQYHSABKAhSGmJsb2NrUHJvZHVjZXJCb290Q29tcGxldGVkEiEKDHN0YW1pbmFfZnJlZRgeIAEoBFILc3RhbWluYUZyZWUSIQoMdHBzX2V4cGVjdGVkGB8gASgEUgt0cHNFeHBlY3RlZBIvChRhdmdfdHBzX3VwZGF0ZV9ibG9jaxggIAEoBFIRYXZnVHBzVXBkYXRlQmxvY2sSKQoRYXZnX3Rwc19pbl93aW5kb3cYISABKARSDmF2Z1Rwc0luV2luZG93EiYKD29uZV9kYXlfc3RhbWluYRgiIAEoBFINb25lRGF5U3RhbWluYRI9ChJhY2NvdW50X2NyZWF0ZV9mZWUYIyABKAsyDy5wcm90b3R5cGUuY29pblIQYWNjb3VudENyZWF0ZUZlZRJCChByZXB1dGF0aW9uX2FkbWluGCQgASgLMhcucHJvdG90eXBlLmFjY291bnRfbmFtZVIPcmVwdXRhdGlvbkFkbWluEjkKGWN1cnJlbnRfZXBvY2hfc3RhcnRfYmxvY2sYJSABKARSFmN1cnJlbnRFcG9jaFN0YXJ0QmxvY2sSJQoOZXBvY2hfZHVyYXRpb24YJiABKARSDWVwb2NoRHVyYXRpb24SNgoYdG9wX25fYWNxdWlyZV9mcmVlX3Rva2VuGCcgASgNUhR0b3BOQWNxdWlyZUZyZWVUb2tlbhI5ChBwZXJfdGlja2V0X3ByaWNlGCggASgLMg8ucHJvdG90eXBlLmNvaW5SDnBlclRpY2tldFByaWNlEioKEXBlcl90aWNrZXRfd2VpZ2h0GCkgASgEUg9wZXJUaWNrZXRXZWlnaHQSNgoOdGlja2V0c19pbmNvbWUYKiABKAsyDy5wcm90b3R5cGUudmVzdFINdGlja2V0c0luY29tZRIuChNjaGFyZ2VkX3RpY2tldHNfbnVtGCsgASgEUhFjaGFyZ2VkVGlja2V0c051bRJACg9jb3B5cmlnaHRfYWRtaW4YLCABKAsyFy5wcm90b3R5cGUuYWNjb3VudF9uYW1lUg5jb3B5cmlnaHRBZG1pbhI5ChB0aWNrZXRzX2JwX2JvbnVzGC0gASgLMg8ucHJvdG90eXBlLnZlc3RSDnRpY2tldHNCcEJvbnVz');
+@$core.Deprecated('Use beneficiary_route_typeDescriptor instead')
 const beneficiary_route_type$json = const {
   '1': 'beneficiary_route_type',
   '2': const [
@@ -171,3 +215,6 @@ const beneficiary_route_type$json = const {
   ],
 };
 
+/// Descriptor for `beneficiary_route_type`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List beneficiary_route_typeDescriptor = $convert
+    .base64Decode('ChZiZW5lZmljaWFyeV9yb3V0ZV90eXBlEisKBG5hbWUYASABKAsyFy5wcm90b3R5cGUuYWNjb3VudF9uYW1lUgRuYW1lEhYKBndlaWdodBgCIAEoDVIGd2VpZ2h0');

@@ -2,9 +2,14 @@
 //  Generated code. Do not modify.
 //  source: prototype/transaction.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,deprecated_member_use_from_same_package,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
 
+import 'dart:core' as $core;
+import 'dart:convert' as $convert;
+import 'dart:typed_data' as $typed_data;
+
+@$core.Deprecated('Use operationDescriptor instead')
 const operation$json = const {
   '1': 'operation',
   '2': const [
@@ -35,6 +40,10 @@ const operation$json = const {
   ],
 };
 
+/// Descriptor for `operation`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List operationDescriptor = $convert.base64Decode(
+    'CglvcGVyYXRpb24SNwoDb3AxGAEgASgLMiMucHJvdG90eXBlLmFjY291bnRfY3JlYXRlX29wZXJhdGlvbkgAUgNvcDESMQoDb3AyGAIgASgLMh0ucHJvdG90eXBlLnRyYW5zZmVyX29wZXJhdGlvbkgAUgNvcDISNAoDb3AzGAMgASgLMiAucHJvdG90eXBlLmJwX3JlZ2lzdGVyX29wZXJhdGlvbkgAUgNvcDMSMgoDb3A0GAQgASgLMh4ucHJvdG90eXBlLmJwX2VuYWJsZV9vcGVyYXRpb25IAFIDb3A0EjAKA29wNRgFIAEoCzIcLnByb3RvdHlwZS5icF92b3RlX29wZXJhdGlvbkgAUgNvcDUSLQoDb3A2GAYgASgLMhkucHJvdG90eXBlLnBvc3Rfb3BlcmF0aW9uSABSA29wNhIuCgNvcDcYByABKAsyGi5wcm90b3R5cGUucmVwbHlfb3BlcmF0aW9uSABSA29wNxIvCgNvcDgYCCABKAsyGy5wcm90b3R5cGUuZm9sbG93X29wZXJhdGlvbkgAUgNvcDgSLQoDb3A5GAkgASgLMhkucHJvdG90eXBlLnZvdGVfb3BlcmF0aW9uSABSA29wORI7CgRvcDEwGAogASgLMiUucHJvdG90eXBlLnRyYW5zZmVyX3RvX3Zlc3Rfb3BlcmF0aW9uSABSBG9wMTASOgoEb3AxMxgNIAEoCzIkLnByb3RvdHlwZS5jb250cmFjdF9kZXBsb3lfb3BlcmF0aW9uSABSBG9wMTMSOQoEb3AxNBgOIAEoCzIjLnByb3RvdHlwZS5jb250cmFjdF9hcHBseV9vcGVyYXRpb25IAFIEb3AxNBI3CgRvcDE2GBAgASgLMiEucHJvdG90eXBlLmNvbnZlcnRfdmVzdF9vcGVyYXRpb25IAFIEb3AxNhIwCgRvcDE3GBEgASgLMhoucHJvdG90eXBlLnN0YWtlX29wZXJhdGlvbkgAUgRvcDE3EjMKBG9wMTgYEiABKAsyHS5wcm90b3R5cGUudW5fc3Rha2Vfb3BlcmF0aW9uSABSBG9wMTgSNAoEb3AxORgTIAEoCzIeLnByb3RvdHlwZS5icF91cGRhdGVfb3BlcmF0aW9uSABSBG9wMTkSOQoEb3AyMBgUIAEoCzIjLnByb3RvdHlwZS5hY2NvdW50X3VwZGF0ZV9vcGVyYXRpb25IAFIEb3AyMBI5CgRvcDIxGBUgASgLMiMucHJvdG90eXBlLmFjcXVpcmVfdGlja2V0X29wZXJhdGlvbkgAUgRvcDIxEjkKBG9wMjIYFiABKAsyIy5wcm90b3R5cGUudm90ZV9ieV90aWNrZXRfb3BlcmF0aW9uSABSBG9wMjISOAoEb3AyMxgXIAEoCzIiLnByb3RvdHlwZS5kZWxlZ2F0ZV92ZXN0X29wZXJhdGlvbkgAUgRvcDIzEjsKBG9wMjQYGCABKAsyJS5wcm90b3R5cGUudW5fZGVsZWdhdGVfdmVzdF9vcGVyYXRpb25IAFIEb3AyNEIECgJvcA==');
+@$core.Deprecated('Use transactionDescriptor instead')
 const transaction$json = const {
   '1': 'transaction',
   '2': const [
@@ -45,6 +54,10 @@ const transaction$json = const {
   ],
 };
 
+/// Descriptor for `transaction`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List transactionDescriptor = $convert.base64Decode(
+    'Cgt0cmFuc2FjdGlvbhIiCg1yZWZfYmxvY2tfbnVtGAEgASgNUgtyZWZCbG9ja051bRIoChByZWZfYmxvY2tfcHJlZml4GAIgASgNUg5yZWZCbG9ja1ByZWZpeBI5CgpleHBpcmF0aW9uGAMgASgLMhkucHJvdG90eXBlLnRpbWVfcG9pbnRfc2VjUgpleHBpcmF0aW9uEjQKCm9wZXJhdGlvbnMYBCADKAsyFC5wcm90b3R5cGUub3BlcmF0aW9uUgpvcGVyYXRpb25z');
+@$core.Deprecated('Use signed_transactionDescriptor instead')
 const signed_transaction$json = const {
   '1': 'signed_transaction',
   '2': const [
@@ -53,6 +66,10 @@ const signed_transaction$json = const {
   ],
 };
 
+/// Descriptor for `signed_transaction`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List signed_transactionDescriptor = $convert.base64Decode(
+    'ChJzaWduZWRfdHJhbnNhY3Rpb24SKAoDdHJ4GAEgASgLMhYucHJvdG90eXBlLnRyYW5zYWN0aW9uUgN0cngSNwoJc2lnbmF0dXJlGAIgASgLMhkucHJvdG90eXBlLnNpZ25hdHVyZV90eXBlUglzaWduYXR1cmU=');
+@$core.Deprecated('Use operation_receipt_with_infoDescriptor instead')
 const operation_receipt_with_info$json = const {
   '1': 'operation_receipt_with_info',
   '2': const [
@@ -62,6 +79,10 @@ const operation_receipt_with_info$json = const {
   ],
 };
 
+/// Descriptor for `operation_receipt_with_info`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List operation_receipt_with_infoDescriptor = $convert.base64Decode(
+    'ChtvcGVyYXRpb25fcmVjZWlwdF93aXRoX2luZm8SFgoGc3RhdHVzGAEgASgNUgZzdGF0dXMSGwoJZ2FzX3VzYWdlGAIgASgEUghnYXNVc2FnZRIdCgp2bV9jb25zb2xlGAMgASgJUgl2bUNvbnNvbGU=');
+@$core.Deprecated('Use transaction_receipt_with_infoDescriptor instead')
 const transaction_receipt_with_info$json = const {
   '1': 'transaction_receipt_with_info',
   '2': const [
@@ -73,6 +94,10 @@ const transaction_receipt_with_info$json = const {
   ],
 };
 
+/// Descriptor for `transaction_receipt_with_info`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List transaction_receipt_with_infoDescriptor = $convert.base64Decode(
+    'Ch10cmFuc2FjdGlvbl9yZWNlaXB0X3dpdGhfaW5mbxIWCgZzdGF0dXMYASABKA1SBnN0YXR1cxIbCgluZXRfdXNhZ2UYAiABKARSCG5ldFVzYWdlEhsKCWNwdV91c2FnZRgDIAEoBFIIY3B1VXNhZ2USHQoKZXJyb3JfaW5mbxgEIAEoCVIJZXJyb3JJbmZvEkUKCm9wX3Jlc3VsdHMYBSADKAsyJi5wcm90b3R5cGUub3BlcmF0aW9uX3JlY2VpcHRfd2l0aF9pbmZvUglvcFJlc3VsdHM=');
+@$core.Deprecated('Use transaction_wrapper_with_infoDescriptor instead')
 const transaction_wrapper_with_info$json = const {
   '1': 'transaction_wrapper_with_info',
   '2': const [
@@ -81,6 +106,10 @@ const transaction_wrapper_with_info$json = const {
   ],
 };
 
+/// Descriptor for `transaction_wrapper_with_info`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List transaction_wrapper_with_infoDescriptor = $convert.base64Decode(
+    'Ch10cmFuc2FjdGlvbl93cmFwcGVyX3dpdGhfaW5mbxI2CgdzaWdfdHJ4GAEgASgLMh0ucHJvdG90eXBlLnNpZ25lZF90cmFuc2FjdGlvblIGc2lnVHJ4EkIKB3JlY2VpcHQYAiABKAsyKC5wcm90b3R5cGUudHJhbnNhY3Rpb25fcmVjZWlwdF93aXRoX2luZm9SB3JlY2VpcHQ=');
+@$core.Deprecated('Use transaction_receiptDescriptor instead')
 const transaction_receipt$json = const {
   '1': 'transaction_receipt',
   '2': const [
@@ -90,6 +119,10 @@ const transaction_receipt$json = const {
   ],
 };
 
+/// Descriptor for `transaction_receipt`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List transaction_receiptDescriptor = $convert.base64Decode(
+    'ChN0cmFuc2FjdGlvbl9yZWNlaXB0EhYKBnN0YXR1cxgBIAEoDVIGc3RhdHVzEhsKCW5ldF91c2FnZRgCIAEoBFIIbmV0VXNhZ2USGwoJY3B1X3VzYWdlGAMgASgEUghjcHVVc2FnZQ==');
+@$core.Deprecated('Use transaction_wrapperDescriptor instead')
 const transaction_wrapper$json = const {
   '1': 'transaction_wrapper',
   '2': const [
@@ -98,6 +131,10 @@ const transaction_wrapper$json = const {
   ],
 };
 
+/// Descriptor for `transaction_wrapper`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List transaction_wrapperDescriptor = $convert.base64Decode(
+    'ChN0cmFuc2FjdGlvbl93cmFwcGVyEjYKB3NpZ190cngYASABKAsyHS5wcm90b3R5cGUuc2lnbmVkX3RyYW5zYWN0aW9uUgZzaWdUcngSOAoHcmVjZWlwdBgCIAEoCzIeLnByb3RvdHlwZS50cmFuc2FjdGlvbl9yZWNlaXB0UgdyZWNlaXB0');
+@$core.Deprecated('Use block_headerDescriptor instead')
 const block_header$json = const {
   '1': 'block_header',
   '2': const [
@@ -109,6 +146,10 @@ const block_header$json = const {
   ],
 };
 
+/// Descriptor for `block_header`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List block_headerDescriptor = $convert.base64Decode(
+    'CgxibG9ja19oZWFkZXISLQoIcHJldmlvdXMYASABKAsyES5wcm90b3R5cGUuc2hhMjU2UghwcmV2aW91cxI3Cgl0aW1lc3RhbXAYAiABKAsyGS5wcm90b3R5cGUudGltZV9wb2ludF9zZWNSCXRpbWVzdGFtcBI+Cg5ibG9ja19wcm9kdWNlchgDIAEoCzIXLnByb3RvdHlwZS5hY2NvdW50X25hbWVSDWJsb2NrUHJvZHVjZXISSQoXdHJhbnNhY3Rpb25fbWVya2xlX3Jvb3QYBCABKAsyES5wcm90b3R5cGUuc2hhMjU2UhV0cmFuc2FjdGlvbk1lcmtsZVJvb3QSJgoPcHJldl9hcHBseV9oYXNoGAUgASgEUg1wcmV2QXBwbHlIYXNo');
+@$core.Deprecated('Use signed_block_headerDescriptor instead')
 const signed_block_header$json = const {
   '1': 'signed_block_header',
   '2': const [
@@ -117,6 +158,10 @@ const signed_block_header$json = const {
   ],
 };
 
+/// Descriptor for `signed_block_header`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List signed_block_headerDescriptor = $convert.base64Decode(
+    'ChNzaWduZWRfYmxvY2tfaGVhZGVyEi8KBmhlYWRlchgBIAEoCzIXLnByb3RvdHlwZS5ibG9ja19oZWFkZXJSBmhlYWRlchJTChhibG9ja19wcm9kdWNlcl9zaWduYXR1cmUYAiABKAsyGS5wcm90b3R5cGUuc2lnbmF0dXJlX3R5cGVSFmJsb2NrUHJvZHVjZXJTaWduYXR1cmU=');
+@$core.Deprecated('Use signed_blockDescriptor instead')
 const signed_block$json = const {
   '1': 'signed_block',
   '2': const [
@@ -125,6 +170,10 @@ const signed_block$json = const {
   ],
 };
 
+/// Descriptor for `signed_block`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List signed_blockDescriptor = $convert.base64Decode(
+    'CgxzaWduZWRfYmxvY2sSQwoNc2lnbmVkX2hlYWRlchgBIAEoCzIeLnByb3RvdHlwZS5zaWduZWRfYmxvY2tfaGVhZGVyUgxzaWduZWRIZWFkZXISQgoMdHJhbnNhY3Rpb25zGAIgAygLMh4ucHJvdG90eXBlLnRyYW5zYWN0aW9uX3dyYXBwZXJSDHRyYW5zYWN0aW9ucw==');
+@$core.Deprecated('Use empty_signed_blockDescriptor instead')
 const empty_signed_block$json = const {
   '1': 'empty_signed_block',
   '2': const [
@@ -133,3 +182,6 @@ const empty_signed_block$json = const {
   ],
 };
 
+/// Descriptor for `empty_signed_block`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List empty_signed_blockDescriptor = $convert.base64Decode(
+    'ChJlbXB0eV9zaWduZWRfYmxvY2sSQwoNc2lnbmVkX2hlYWRlchgBIAEoCzIeLnByb3RvdHlwZS5zaWduZWRfYmxvY2tfaGVhZGVyUgxzaWduZWRIZWFkZXISGwoJdHJ4X2NvdW50GAIgASgNUgh0cnhDb3VudA==');
